@@ -11,7 +11,7 @@ if($_POST)
 
     $mail = new PHPMailer();
 
-    $your_email = "youremail@website.com";
+    $your_email = "emakonde@gmail.com";
 
 
     //check if its an ajax request, exit if not
@@ -267,13 +267,13 @@ if($_POST)
 
 
     //Server settings
-//    $mail->isSMTP();                                            // Send using SMTP
-//    $mail->Host       = 'smtp.googlemail.com';                    // Set the SMTP server to send through
-//    $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-//    $mail->Username   = 'website@gmail.com';                     // SMTP username
-//    $mail->Password   = 'your password';                         // SMTP password
-//    $mail->SMTPSecure = 'TLS';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
-//    $mail->Port       = 587;                                    // TCP port to connect to
+    $mail->isSMTP();                                       // Send using SMTP
+    $mail->Host       = 'smtp.gmail.com';                  // Set the SMTP server to send through
+    $mail->SMTPAuth   = true;                              // Enable SMTP authentication
+    $mail->Username   = 'emakonde@gmail.com';              // SMTP username
+    $mail->Password   = 'zebwxpqibxwjbwew';                    // SMTP password
+    $mail->SMTPSecure = 'TLS';                             // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
+    $mail->Port       = 587;                               // TCP port to connect to
 
     //Recipients
     $mail->setFrom($user_Email,$user_Name);
@@ -284,7 +284,7 @@ if($_POST)
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'New Contact Inquiry from your Website';
-    $mail->Body  = "<h4 style='text-align: center;padding: 25px 15px;background-color: #0c6c9e;color: #FFFFFF;font-size:16px;width:90%;border-radius: 10px;'>Hi There! You have a new inquiry from your website.</h4><br><br>";
+    $mail->Body  = "<h4 style='text-align: center;padding: 25px 15px;background-color: #0c6c9e;color: #FFFFFF;font-size:16px;width:90%;border-radius: 10px;'>Hi There! You have a new inquiry from Sudoweb.</h4><br><br>";
 
     if(isset($_POST["userEmail"])) {
         $mail->Body .= "<strong>Email: </strong>" . $user_Email . "<br>";
